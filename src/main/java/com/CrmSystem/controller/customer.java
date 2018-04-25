@@ -1,6 +1,7 @@
 package com.CrmSystem.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * \* Created with IntelliJ IDEA.
@@ -12,6 +13,14 @@ import org.springframework.stereotype.Controller;
  * \
  */
 @Controller
+@RequestMapping("customer")
 public class customer {
+
+    @RequestMapping("list")
+    public String queryCustomerList() {
+        System.out.print("---->in!!宁海福建省的讲法考虑的实际付款带上飞机代课老师");
+        return "customer";
+    }
+
 
 }

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"  isELIgnored="false" %>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%--<%@ taglib prefix="itcast" uri="http://itcast.cn/common/"%>--%>
+<%@ taglib prefix="itcast" uri="http://itcast.cn/common/"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -283,7 +283,7 @@
 							</tbody>
 						</table>
 						<div class="col-md-12 text-right">
-							<%--<itcast:page url="${pageContext.request.contextPath }/customer/list.action" />--%>
+							<itcast:page url="${pageContext.request.contextPath }/customer/list.action" />
 						</div>
 						<!-- /.panel-body -->
 					</div>
@@ -405,43 +405,43 @@
 	<!-- Custom Theme JavaScript -->
 	<script src="<%=basePath%>js/sb-admin-2.js"></script>
 	
-	<%--<script type="text/javascript">--%>
-		<%--function editCustomer(id) {--%>
-			<%--$.ajax({--%>
-				<%--type:"get",--%>
-				<%--url:"<%=basePath%>customer/edit.action",--%>
-				<%--data:{"id":id},--%>
-				<%--success:function(data) {--%>
-					<%--$("#edit_cust_id").val(data.cust_id);--%>
-					<%--$("#edit_customerName").val(data.cust_name);--%>
-					<%--$("#edit_customerFrom").val(data.cust_source)--%>
-					<%--$("#edit_custIndustry").val(data.cust_industry)--%>
-					<%--$("#edit_custLevel").val(data.cust_level)--%>
-					<%--$("#edit_linkMan").val(data.cust_linkman);--%>
-					<%--$("#edit_phone").val(data.cust_phone);--%>
-					<%--$("#edit_mobile").val(data.cust_mobile);--%>
-					<%--$("#edit_zipcode").val(data.cust_zipcode);--%>
-					<%--$("#edit_address").val(data.cust_address);--%>
-					<%----%>
-				<%--}--%>
-			<%--});--%>
-		<%--}--%>
-		<%--function updateCustomer() {--%>
-			<%--$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){--%>
-				<%--alert("客户信息更新成功！");--%>
-				<%--window.location.reload();--%>
-			<%--});--%>
-		<%--}--%>
-		<%----%>
-		<%--function deleteCustomer(id) {--%>
-			<%--if(confirm('确实要删除该客户吗?')) {--%>
-				<%--$.post("<%=basePath%>customer/delete.action",{"id":id},function(data){--%>
-					<%--alert("客户删除更新成功！");--%>
-					<%--window.location.reload();--%>
-				<%--});--%>
-			<%--}--%>
-		<%--}--%>
-	<%--</script>--%>
+	<script type="text/javascript">
+		function editCustomer(id) {
+			$.ajax({
+				type:"get",
+				url:"<%=basePath%>customer/edit.action",
+				data:{"id":id},
+				success:function(data) {
+					$("#edit_cust_id").val(data.cust_id);
+					$("#edit_customerName").val(data.cust_name);
+					$("#edit_customerFrom").val(data.cust_source)
+					$("#edit_custIndustry").val(data.cust_industry)
+					$("#edit_custLevel").val(data.cust_level)
+					$("#edit_linkMan").val(data.cust_linkman);
+					$("#edit_phone").val(data.cust_phone);
+					$("#edit_mobile").val(data.cust_mobile);
+					$("#edit_zipcode").val(data.cust_zipcode);
+					$("#edit_address").val(data.cust_address);
+
+				}
+			});
+		}
+		function updateCustomer() {
+			$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){
+				alert("客户信息更新成功！");
+				window.location.reload();
+			});
+		}
+
+		function deleteCustomer(id) {
+			if(confirm('确实要删除该客户吗?')) {
+				$.post("<%=basePath%>customer/delete.action",{"id":id},function(data){
+					alert("客户删除更新成功！");
+					window.location.reload();
+				});
+			}
+		}
+	</script>
 
 </body>
 
