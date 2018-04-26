@@ -3,9 +3,9 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <mappers>
-        <!--<mapper resource="cn/happy/entity/IUserInfoDAO.xml" /> -->
-        <package name="com.CrmSystem.mappers"/>
-    </mappers>
+    <!--<mappers>-->
+        <!--<mapper resource="mappers/*.xml" />-->
+        <!--&lt;!&ndash;<package name="com.CrmSystem.dao"/>&ndash;&gt;-->
+    <!--</mappers>-->
 
 </configuration>

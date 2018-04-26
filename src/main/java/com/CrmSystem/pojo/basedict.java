@@ -1,98 +1,83 @@
 package com.CrmSystem.pojo;
 
 public class basedict {
-    private String dictId;
+    private String dict_id;
 
-    private String dictTypeCode;
+    private String dict_type_code;
 
-    private String dictTypeName;
+    private String dict_type_name;
 
-    private String dictItemName;
+    private String dict_item_name;
 
-    private String dictItemCode;
+    private String dict_item_code;
 
-    private Integer dictSort;
+    private Integer dict_sort;
 
-    private String dictEnable;
+    private String dict_enable;
 
-    private String dictMemo;
+    private String dict_memo;
 
-    public basedict(String dictId, String dictTypeCode, String dictTypeName, String dictItemName, String dictItemCode, Integer dictSort, String dictEnable, String dictMemo) {
-        this.dictId = dictId;
-        this.dictTypeCode = dictTypeCode;
-        this.dictTypeName = dictTypeName;
-        this.dictItemName = dictItemName;
-        this.dictItemCode = dictItemCode;
-        this.dictSort = dictSort;
-        this.dictEnable = dictEnable;
-        this.dictMemo = dictMemo;
+    public String getDict_id() {
+        return dict_id;
     }
 
-    public basedict() {
-        super();
+    public void setDict_id(String dict_id) {
+        this.dict_id = dict_id;
     }
 
-    public String getDictId() {
-        return dictId;
+    public String getDict_type_code() {
+        return dict_type_code;
     }
 
-    public void setDictId(String dictId) {
-        this.dictId = dictId == null ? null : dictId.trim();
+    public void setDict_type_code(String dict_type_code) {
+        this.dict_type_code = dict_type_code;
     }
 
-    public String getDictTypeCode() {
-        return dictTypeCode;
+    public String getDict_type_name() {
+        return dict_type_name;
     }
 
-    public void setDictTypeCode(String dictTypeCode) {
-        this.dictTypeCode = dictTypeCode == null ? null : dictTypeCode.trim();
+    public void setDict_type_name(String dict_type_name) {
+        this.dict_type_name = dict_type_name;
     }
 
-    public String getDictTypeName() {
-        return dictTypeName;
+    public String getDict_item_name() {
+        return dict_item_name;
     }
 
-    public void setDictTypeName(String dictTypeName) {
-        this.dictTypeName = dictTypeName == null ? null : dictTypeName.trim();
+    public void setDict_item_name(String dict_item_name) {
+        this.dict_item_name = dict_item_name;
     }
 
-    public String getDictItemName() {
-        return dictItemName;
+    public String getDict_item_code() {
+        return dict_item_code;
     }
 
-    public void setDictItemName(String dictItemName) {
-        this.dictItemName = dictItemName == null ? null : dictItemName.trim();
+    public void setDict_item_code(String dict_item_code) {
+        this.dict_item_code = dict_item_code;
     }
 
-    public String getDictItemCode() {
-        return dictItemCode;
+    public Integer getDict_sort() {
+        return dict_sort;
     }
 
-    public void setDictItemCode(String dictItemCode) {
-        this.dictItemCode = dictItemCode == null ? null : dictItemCode.trim();
+    public void setDict_sort(Integer dict_sort) {
+        this.dict_sort = dict_sort;
     }
 
-    public Integer getDictSort() {
-        return dictSort;
+    public String getDict_enable() {
+        return dict_enable;
     }
 
-    public void setDictSort(Integer dictSort) {
-        this.dictSort = dictSort;
+    public void setDict_enable(String dict_enable) {
+        this.dict_enable = dict_enable;
     }
 
-    public String getDictEnable() {
-        return dictEnable;
+    public String getDict_memo() {
+        return dict_memo;
     }
 
-    public void setDictEnable(String dictEnable) {
-        this.dictEnable = dictEnable == null ? null : dictEnable.trim();
-    }
-
-    public String getDictMemo() {
-        return dictMemo;
-    }
-
-    public void setDictMemo(String dictMemo) {
-        this.dictMemo = dictMemo == null ? null : dictMemo.trim();
+    public void setDict_memo(String dict_memo) {
+        this.dict_memo = dict_memo;
     }
 }

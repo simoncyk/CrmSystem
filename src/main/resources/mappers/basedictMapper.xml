@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.CrmSystem.dao.basedictMapper" >
-  <resultMap id="BaseResultMap" type="com.CrmSystem.pojo.basedict" >
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.CrmSystem.dao.basedictMapper">
+  <resultMap id="BaseResultMap" type="com.CrmSystem.pojo.basedict">
     <constructor >
       <idArg column="dict_id" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="dict_type_code" jdbcType="VARCHAR" javaType="java.lang.String" />
@@ -128,4 +128,14 @@
       dict_memo = #{dictMemo,jdbcType=VARCHAR}
     where dict_id = #{dictId,jdbcType=VARCHAR}
   </update>
+  <!-- 根据类别代码查询数据 -->
+  <select id="queryBaseDictByDictTypeCode" parameterType="string"
+          resultType="com.CrmSystem.pojo.basedict">
+    SELECT * FROM crm_base_dict WHERE dict_type_code =
+    #{dict_type_code}
+  </select>
+
+
+
+
 </mapper>

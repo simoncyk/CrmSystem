@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"  isELIgnored="false" %>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="itcast" uri="http://itcast.cn/common/"%>
+<%--<%@ taglib prefix="itcast" uri="http://itcast.cn/common/"%>--%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -65,115 +65,115 @@
 		<!-- /.navbar-header -->
 
 		<ul class="nav navbar-top-links navbar-right">
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#"> <i class="fa fa-envelope fa-fw"></i>
-					<i class="fa fa-caret-down"></i>
-			</a>
-				<ul class="dropdown-menu dropdown-messages">
-					<li><a href="#">
-							<div>
-								<strong>令狐冲</strong> <span class="pull-right text-muted">
-									<em>昨天</em>
-								</span>
-							</div>
-							<div>今天晚上向大哥找我吃饭，讨论一下去梅庄的事...</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a class="text-center" href="#"> <strong>查看全部消息</strong>
-							<i class="fa fa-angle-right"></i>
-					</a></li>
-				</ul> <!-- /.dropdown-messages --></li>
-			<!-- /.dropdown -->
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#"> <i class="fa fa-tasks fa-fw"></i>
-					<i class="fa fa-caret-down"></i>
-			</a>
-				<ul class="dropdown-menu dropdown-tasks">
-					<li><a href="#">
-							<div>
-								<p>
-									<strong>任务 1</strong> <span class="pull-right text-muted">完成40%</span>
-								</p>
-								<div class="progress progress-striped active">
-									<div class="progress-bar progress-bar-success"
-										role="progressbar" aria-valuenow="40" aria-valuemin="0"
-										aria-valuemax="100" style="width: 40%">
-										<span class="sr-only">完成40%</span>
-									</div>
-								</div>
-							</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a href="#">
-							<div>
-								<p>
-									<strong>任务 2</strong> <span class="pull-right text-muted">完成20%</span>
-								</p>
-								<div class="progress progress-striped active">
-									<div class="progress-bar progress-bar-info" role="progressbar"
-										aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-										style="width: 20%">
-										<span class="sr-only">完成20%</span>
-									</div>
-								</div>
-							</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a class="text-center" href="#"> <strong>查看所有任务</strong>
-							<i class="fa fa-angle-right"></i>
-					</a></li>
-				</ul> <!-- /.dropdown-tasks --></li>
-			<!-- /.dropdown -->
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#"> <i class="fa fa-bell fa-fw"></i>
-					<i class="fa fa-caret-down"></i>
-			</a>
-				<ul class="dropdown-menu dropdown-alerts">
-					<li><a href="#">
-							<div>
-								<i class="fa fa-comment fa-fw"></i> 新回复 <span
-									class="pull-right text-muted small">4分钟之前</span>
-							</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a href="#">
-							<div>
-								<i class="fa fa-envelope fa-fw"></i> 新消息 <span
-									class="pull-right text-muted small">4分钟之前</span>
-							</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a href="#">
-							<div>
-								<i class="fa fa-tasks fa-fw"></i> 新任务 <span
-									class="pull-right text-muted small">4分钟之前</span>
-							</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a href="#">
-							<div>
-								<i class="fa fa-upload fa-fw"></i> 服务器重启 <span
-									class="pull-right text-muted small">4分钟之前</span>
-							</div>
-					</a></li>
-					<li class="divider"></li>
-					<li><a class="text-center" href="#"> <strong>查看所有提醒</strong>
-							<i class="fa fa-angle-right"></i>
-					</a></li>
-				</ul> <!-- /.dropdown-alerts --></li>
-			<!-- /.dropdown -->
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i>
-					<i class="fa fa-caret-down"></i>
-			</a>
-				<ul class="dropdown-menu dropdown-user">
-					<li><a href="#"><i class="fa fa-user fa-fw"></i> 用户设置</a></li>
-					<li><a href="#"><i class="fa fa-gear fa-fw"></i> 系统设置</a></li>
-					<li class="divider"></li>
-					<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>
-							退出登录</a></li>
-				</ul> <!-- /.dropdown-user --></li>
-			<!-- /.dropdown -->
+			<%--<li class="dropdown"><a class="dropdown-toggle"--%>
+				<%--data-toggle="dropdown" href="#"> <i class="fa fa-envelope fa-fw"></i>--%>
+					<%--<i class="fa fa-caret-down"></i>--%>
+			<%--</a>--%>
+				<%--<ul class="dropdown-menu dropdown-messages">--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<strong>令狐冲</strong> <span class="pull-right text-muted">--%>
+									<%--<em>昨天</em>--%>
+								<%--</span>--%>
+							<%--</div>--%>
+							<%--<div>今天晚上向大哥找我吃饭，讨论一下去梅庄的事...</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a class="text-center" href="#"> <strong>查看全部消息</strong>--%>
+							<%--<i class="fa fa-angle-right"></i>--%>
+					<%--</a></li>--%>
+				<%--</ul> <!-- /.dropdown-messages --></li>--%>
+			<%--<!-- /.dropdown -->--%>
+			<%--<li class="dropdown"><a class="dropdown-toggle"--%>
+				<%--data-toggle="dropdown" href="#"> <i class="fa fa-tasks fa-fw"></i>--%>
+					<%--<i class="fa fa-caret-down"></i>--%>
+			<%--</a>--%>
+				<%--<ul class="dropdown-menu dropdown-tasks">--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<p>--%>
+									<%--<strong>任务 1</strong> <span class="pull-right text-muted">完成40%</span>--%>
+								<%--</p>--%>
+								<%--<div class="progress progress-striped active">--%>
+									<%--<div class="progress-bar progress-bar-success"--%>
+										<%--role="progressbar" aria-valuenow="40" aria-valuemin="0"--%>
+										<%--aria-valuemax="100" style="width: 40%">--%>
+										<%--<span class="sr-only">完成40%</span>--%>
+									<%--</div>--%>
+								<%--</div>--%>
+							<%--</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<p>--%>
+									<%--<strong>任务 2</strong> <span class="pull-right text-muted">完成20%</span>--%>
+								<%--</p>--%>
+								<%--<div class="progress progress-striped active">--%>
+									<%--<div class="progress-bar progress-bar-info" role="progressbar"--%>
+										<%--aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"--%>
+										<%--style="width: 20%">--%>
+										<%--<span class="sr-only">完成20%</span>--%>
+									<%--</div>--%>
+								<%--</div>--%>
+							<%--</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a class="text-center" href="#"> <strong>查看所有任务</strong>--%>
+							<%--<i class="fa fa-angle-right"></i>--%>
+					<%--</a></li>--%>
+				<%--</ul> <!-- /.dropdown-tasks --></li>--%>
+			<%--<!-- /.dropdown -->--%>
+			<%--<li class="dropdown"><a class="dropdown-toggle"--%>
+				<%--data-toggle="dropdown" href="#"> <i class="fa fa-bell fa-fw"></i>--%>
+					<%--<i class="fa fa-caret-down"></i>--%>
+			<%--</a>--%>
+				<%--<ul class="dropdown-menu dropdown-alerts">--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<i class="fa fa-comment fa-fw"></i> 新回复 <span--%>
+									<%--class="pull-right text-muted small">4分钟之前</span>--%>
+							<%--</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<i class="fa fa-envelope fa-fw"></i> 新消息 <span--%>
+									<%--class="pull-right text-muted small">4分钟之前</span>--%>
+							<%--</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<i class="fa fa-tasks fa-fw"></i> 新任务 <span--%>
+									<%--class="pull-right text-muted small">4分钟之前</span>--%>
+							<%--</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a href="#">--%>
+							<%--<div>--%>
+								<%--<i class="fa fa-upload fa-fw"></i> 服务器重启 <span--%>
+									<%--class="pull-right text-muted small">4分钟之前</span>--%>
+							<%--</div>--%>
+					<%--</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a class="text-center" href="#"> <strong>查看所有提醒</strong>--%>
+							<%--<i class="fa fa-angle-right"></i>--%>
+					<%--</a></li>--%>
+				<%--</ul> <!-- /.dropdown-alerts --></li>--%>
+			<%--<!-- /.dropdown -->--%>
+			<%--<li class="dropdown"><a class="dropdown-toggle"--%>
+				<%--data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i>--%>
+					<%--<i class="fa fa-caret-down"></i>--%>
+			<%--</a>--%>
+				<%--<ul class="dropdown-menu dropdown-user">--%>
+					<%--<li><a href="#"><i class="fa fa-user fa-fw"></i> 用户设置</a></li>--%>
+					<%--<li><a href="#"><i class="fa fa-gear fa-fw"></i> 系统设置</a></li>--%>
+					<%--<li class="divider"></li>--%>
+					<%--<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>--%>
+							<%--退出登录</a></li>--%>
+				<%--</ul> <!-- /.dropdown-user --></li>--%>
+			<%--<!-- /.dropdown -->--%>
 		</ul>
 		<!-- /.navbar-top-links -->
 
@@ -192,8 +192,8 @@
 					</li>
 					<li><a href="customer.action" class="active"><i
 							class="fa fa-edit fa-fw"></i> 客户管理</a></li>
-					<li><a href="salevisit.action"><i
-							class="fa fa-dashboard fa-fw"></i> 客户拜访</a></li>
+					<%--<li><a href="salevisit.action"><i--%>
+							<%--class="fa fa-dashboard fa-fw"></i> 客户拜访</a></li>--%>
 				</ul>
 			</div>
 			<!-- /.sidebar-collapse -->
@@ -283,7 +283,7 @@
 							</tbody>
 						</table>
 						<div class="col-md-12 text-right">
-							<itcast:page url="${pageContext.request.contextPath }/customer/list.action" />
+							<%--<itcast:page url="${pageContext.request.contextPath }/customer/list.action" />--%>
 						</div>
 						<!-- /.panel-body -->
 					</div>
@@ -405,43 +405,43 @@
 	<!-- Custom Theme JavaScript -->
 	<script src="<%=basePath%>js/sb-admin-2.js"></script>
 	
-	<script type="text/javascript">
-		function editCustomer(id) {
-			$.ajax({
-				type:"get",
-				url:"<%=basePath%>customer/edit.action",
-				data:{"id":id},
-				success:function(data) {
-					$("#edit_cust_id").val(data.cust_id);
-					$("#edit_customerName").val(data.cust_name);
-					$("#edit_customerFrom").val(data.cust_source)
-					$("#edit_custIndustry").val(data.cust_industry)
-					$("#edit_custLevel").val(data.cust_level)
-					$("#edit_linkMan").val(data.cust_linkman);
-					$("#edit_phone").val(data.cust_phone);
-					$("#edit_mobile").val(data.cust_mobile);
-					$("#edit_zipcode").val(data.cust_zipcode);
-					$("#edit_address").val(data.cust_address);
+	<%--<script type="text/javascript">--%>
+		<%--function editCustomer(id) {--%>
+			<%--$.ajax({--%>
+				<%--type:"get",--%>
+				<%--url:"<%=basePath%>customer/edit.action",--%>
+				<%--data:{"id":id},--%>
+				<%--success:function(data) {--%>
+					<%--$("#edit_cust_id").val(data.cust_id);--%>
+					<%--$("#edit_customerName").val(data.cust_name);--%>
+					<%--$("#edit_customerFrom").val(data.cust_source)--%>
+					<%--$("#edit_custIndustry").val(data.cust_industry)--%>
+					<%--$("#edit_custLevel").val(data.cust_level)--%>
+					<%--$("#edit_linkMan").val(data.cust_linkman);--%>
+					<%--$("#edit_phone").val(data.cust_phone);--%>
+					<%--$("#edit_mobile").val(data.cust_mobile);--%>
+					<%--$("#edit_zipcode").val(data.cust_zipcode);--%>
+					<%--$("#edit_address").val(data.cust_address);--%>
 
-				}
-			});
-		}
-		function updateCustomer() {
-			$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){
-				alert("客户信息更新成功！");
-				window.location.reload();
-			});
-		}
+				<%--}--%>
+			<%--});--%>
+		<%--}--%>
+		<%--function updateCustomer() {--%>
+			<%--$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){--%>
+				<%--alert("客户信息更新成功！");--%>
+				<%--window.location.reload();--%>
+			<%--});--%>
+		<%--}--%>
 
-		function deleteCustomer(id) {
-			if(confirm('确实要删除该客户吗?')) {
-				$.post("<%=basePath%>customer/delete.action",{"id":id},function(data){
-					alert("客户删除更新成功！");
-					window.location.reload();
-				});
-			}
-		}
-	</script>
+		<%--function deleteCustomer(id) {--%>
+			<%--if(confirm('确实要删除该客户吗?')) {--%>
+				<%--$.post("<%=basePath%>customer/delete.action",{"id":id},function(data){--%>
+					<%--alert("客户删除更新成功！");--%>
+					<%--window.location.reload();--%>
+				<%--});--%>
+			<%--}--%>
+		<%--}--%>
+	<%--</script>--%>
 
 </body>
 

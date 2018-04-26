@@ -2,6 +2,8 @@ package com.CrmSystem.dao;
 
 import com.CrmSystem.pojo.basedict;
 
+import java.util.List;
+
 public interface basedictMapper {
     int deleteByPrimaryKey(String dictId);
 
@@ -14,4 +16,5 @@ public interface basedictMapper {
     int updateByPrimaryKeySelective(basedict record);
 
     int updateByPrimaryKey(basedict record);
+    List<basedict> queryBaseDictByDictTypeCode(String dictTypeCode);
 }

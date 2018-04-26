@@ -3,153 +3,121 @@ package com.CrmSystem.pojo;
 import java.util.Date;
 
 public class customer {
-    private Long custId;
+    private Long cust_id;
+    private String cust_name;
+    private Long cust_user_id;
+    private Long cust_create_id;
+    private String cust_source;
+    private String cust_industry;
+    private String cust_level;
+    private String cust_linkman;
+    private String cust_phone;
+    private String cust_mobile;
+    private String cust_zipcode;
+    private String cust_address;
+    private Date cust_createtime;
 
-    private String custName;
-
-    private Long custUserId;
-
-    private Long custCreateId;
-
-    private String custSource;
-
-    private String custIndustry;
-
-    private String custLevel;
-
-    private String custLinkman;
-
-    private String custPhone;
-
-    private String custMobile;
-
-    private String custZipcode;
-
-    private String custAddress;
-
-    private Date custCreatetime;
-
-    public customer(Long custId, String custName, Long custUserId, Long custCreateId, String custSource, String custIndustry, String custLevel, String custLinkman, String custPhone, String custMobile, String custZipcode, String custAddress, Date custCreatetime) {
-        this.custId = custId;
-        this.custName = custName;
-        this.custUserId = custUserId;
-        this.custCreateId = custCreateId;
-        this.custSource = custSource;
-        this.custIndustry = custIndustry;
-        this.custLevel = custLevel;
-        this.custLinkman = custLinkman;
-        this.custPhone = custPhone;
-        this.custMobile = custMobile;
-        this.custZipcode = custZipcode;
-        this.custAddress = custAddress;
-        this.custCreatetime = custCreatetime;
+    public Long getCust_id() {
+        return cust_id;
     }
 
-    public customer() {
-        super();
+    public void setCust_id(Long cust_id) {
+        this.cust_id = cust_id;
     }
 
-    public Long getCustId() {
-        return custId;
+    public String getCust_name() {
+        return cust_name;
     }
 
-    public void setCustId(Long custId) {
-        this.custId = custId;
+    public void setCust_name(String cust_name) {
+        this.cust_name = cust_name;
     }
 
-    public String getCustName() {
-        return custName;
+    public Long getCust_user_id() {
+        return cust_user_id;
     }
 
-    public void setCustName(String custName) {
-        this.custName = custName == null ? null : custName.trim();
+    public void setCust_user_id(Long cust_user_id) {
+        this.cust_user_id = cust_user_id;
     }
 
-    public Long getCustUserId() {
-        return custUserId;
+    public Long getCust_create_id() {
+        return cust_create_id;
     }
 
-    public void setCustUserId(Long custUserId) {
-        this.custUserId = custUserId;
+    public void setCust_create_id(Long cust_create_id) {
+        this.cust_create_id = cust_create_id;
     }
 
-    public Long getCustCreateId() {
-        return custCreateId;
+    public String getCust_source() {
+        return cust_source;
     }
 
-    public void setCustCreateId(Long custCreateId) {
-        this.custCreateId = custCreateId;
+    public void setCust_source(String cust_source) {
+        this.cust_source = cust_source;
     }
 
-    public String getCustSource() {
-        return custSource;
+    public String getCust_industry() {
+        return cust_industry;
     }
 
-    public void setCustSource(String custSource) {
-        this.custSource = custSource == null ? null : custSource.trim();
+    public void setCust_industry(String cust_industry) {
+        this.cust_industry = cust_industry;
     }
 
-    public String getCustIndustry() {
-        return custIndustry;
+    public String getCust_level() {
+        return cust_level;
     }
 
-    public void setCustIndustry(String custIndustry) {
-        this.custIndustry = custIndustry == null ? null : custIndustry.trim();
+    public void setCust_level(String cust_level) {
+        this.cust_level = cust_level;
     }
 
-    public String getCustLevel() {
-        return custLevel;
+    public String getCust_linkman() {
+        return cust_linkman;
     }
 
-    public void setCustLevel(String custLevel) {
-        this.custLevel = custLevel == null ? null : custLevel.trim();
+    public void setCust_linkman(String cust_linkman) {
+        this.cust_linkman = cust_linkman;
     }
 
-    public String getCustLinkman() {
-        return custLinkman;
+    public String getCust_phone() {
+        return cust_phone;
     }
 
-    public void setCustLinkman(String custLinkman) {
-        this.custLinkman = custLinkman == null ? null : custLinkman.trim();
+    public void setCust_phone(String cust_phone) {
+        this.cust_phone = cust_phone;
     }
 
-    public String getCustPhone() {
-        return custPhone;
+    public String getCust_mobile() {
+        return cust_mobile;
     }
 
-    public void setCustPhone(String custPhone) {
-        this.custPhone = custPhone == null ? null : custPhone.trim();
+    public void setCust_mobile(String cust_mobile) {
+        this.cust_mobile = cust_mobile;
     }
 
-    public String getCustMobile() {
-        return custMobile;
+    public String getCust_zipcode() {
+        return cust_zipcode;
     }
 
-    public void setCustMobile(String custMobile) {
-        this.custMobile = custMobile == null ? null : custMobile.trim();
+    public void setCust_zipcode(String cust_zipcode) {
+        this.cust_zipcode = cust_zipcode;
     }
 
-    public String getCustZipcode() {
-        return custZipcode;
+    public String getCust_address() {
+        return cust_address;
     }
 
-    public void setCustZipcode(String custZipcode) {
-        this.custZipcode = custZipcode == null ? null : custZipcode.trim();
+    public void setCust_address(String cust_address) {
+        this.cust_address = cust_address;
     }
 
-    public String getCustAddress() {
-        return custAddress;
+    public Date getCust_createtime() {
+        return cust_createtime;
     }
 
-    public void setCustAddress(String custAddress) {
-        this.custAddress = custAddress == null ? null : custAddress.trim();
-    }
-
-    public Date getCustCreatetime() {
-        return custCreatetime;
-    }
-
-    public void setCustCreatetime(Date custCreatetime) {
-        this.custCreatetime = custCreatetime;
+    public void setCust_createtime(Date cust_createtime) {
+        this.cust_createtime = cust_createtime;
     }
 }

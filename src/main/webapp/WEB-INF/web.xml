@@ -4,6 +4,9 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/dtd/web-app_2_3.dtd"
          id="WebApp_ID" >
   <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>./WEB-INF/jsp/customer.jsp</welcome-file>
+  </welcome-file-list>
 
   <filter>
     <filter-name>CharacterEncodingFilter</filter-name>
