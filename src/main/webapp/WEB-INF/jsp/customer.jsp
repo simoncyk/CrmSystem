@@ -265,7 +265,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${page.rows}" var="row">
+								<c:forEach items="${page}" var="row">
 									<tr>
 										<td>${row.cust_id}</td>
 										<td>${row.cust_name}</td>
@@ -405,43 +405,46 @@
 	<!-- Custom Theme JavaScript -->
 	<script src="<%=basePath%>js/sb-admin-2.js"></script>
 	
-	<%--<script type="text/javascript">--%>
-		<%--function editCustomer(id) {--%>
-			<%--$.ajax({--%>
-				<%--type:"get",--%>
-				<%--url:"<%=basePath%>customer/edit.action",--%>
-				<%--data:{"id":id},--%>
-				<%--success:function(data) {--%>
-					<%--$("#edit_cust_id").val(data.cust_id);--%>
-					<%--$("#edit_customerName").val(data.cust_name);--%>
-					<%--$("#edit_customerFrom").val(data.cust_source)--%>
-					<%--$("#edit_custIndustry").val(data.cust_industry)--%>
-					<%--$("#edit_custLevel").val(data.cust_level)--%>
-					<%--$("#edit_linkMan").val(data.cust_linkman);--%>
-					<%--$("#edit_phone").val(data.cust_phone);--%>
-					<%--$("#edit_mobile").val(data.cust_mobile);--%>
-					<%--$("#edit_zipcode").val(data.cust_zipcode);--%>
-					<%--$("#edit_address").val(data.cust_address);--%>
+	<script type="text/javascript">
+		thisU1 = window.location.protocol; // http:
+		thisU2 = window.location.host;   // localhost:81
+		basePath=thisU1+thisU2;
+		function editCustomer(id) {
+			$.ajax({
+				type:"get",
+				url:"/customer/edit.action",
+				data:{"id":id},
+				success:function(data) {
+					$("#edit_cust_id").val(data.cust_id);
+					$("#edit_customerName").val(data.cust_name);
+					$("#edit_customerFrom").val(data.cust_source)
+					$("#edit_custIndustry").val(data.cust_industry)
+					$("#edit_custLevel").val(data.cust_level)
+					$("#edit_linkMan").val(data.cust_linkman);
+					$("#edit_phone").val(data.cust_phone);
+					$("#edit_mobile").val(data.cust_mobile);
+					$("#edit_zipcode").val(data.cust_zipcode);
+					$("#edit_address").val(data.cust_address);
 
-				<%--}--%>
-			<%--});--%>
-		<%--}--%>
-		<%--function updateCustomer() {--%>
-			<%--$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){--%>
-				<%--alert("客户信息更新成功！");--%>
-				<%--window.location.reload();--%>
-			<%--});--%>
-		<%--}--%>
+				}
+			});
+		}
+		function updateCustomer() {
+			$.post("/customer/update.action",$("#edit_customer_form").serialize(),function(data){
+				alert("客户信息更新成功！");
+				window.location.reload();
+			});
+		}
 
-		<%--function deleteCustomer(id) {--%>
-			<%--if(confirm('确实要删除该客户吗?')) {--%>
-				<%--$.post("<%=basePath%>customer/delete.action",{"id":id},function(data){--%>
-					<%--alert("客户删除更新成功！");--%>
-					<%--window.location.reload();--%>
-				<%--});--%>
-			<%--}--%>
-		<%--}--%>
-	<%--</script>--%>
+		function deleteCustomer(id) {
+			if(confirm('确实要删除该客户吗?')) {
+				$.post("/customer/delete.action",{"id":id},function(data){
+					alert("客户删除更新成功！");
+					window.location.reload();
+				});
+			}
+		}
+	</script>
 
 </body>
 

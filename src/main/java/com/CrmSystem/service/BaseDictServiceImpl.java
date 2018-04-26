@@ -1,19 +1,23 @@
 package com.CrmSystem.service;
 
 import com.CrmSystem.dao.basedictMapper;
+import com.CrmSystem.dao.customerMapper;
 import com.CrmSystem.pojo.basedict;
+import com.CrmSystem.pojo.customer;
 import org.springframework.beans.factory.annotation.Autowired;
-import  com.CrmSystem.pojo.basedict;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.concurrent.ExecutionException;
+
 
 @Service
 public class BaseDictServiceImpl implements  BaseDictService {
 
     @Autowired
     private basedictMapper baseDictMapper;
+    @Autowired
+    private customerMapper customerMapper;
 
     @Override
     public List<basedict> queryBaseDictByDictTypeCode(String dictTypeCode)  {
@@ -22,6 +26,32 @@ public class BaseDictServiceImpl implements  BaseDictService {
             return list;
 
 
+    }
+    @Override
+    public List<customer> queryCustomerByQueryVo(){
+
+        List<customer> list = customerMapper.queryCustomerByQueryVo();
+
+
+        return list;
+
+    }
+
+
+    @Override
+    public customer queryCustomerById(Long id) {
+        customer customer = this.customerMapper.queryCustomerById(id);
+        return customer;
+    }
+
+    @Override
+    public int updateCustomerById(customer customer) {
+       return  this.customerMapper.updateCustomerById(customer);
+    }
+
+    @Override
+    public void deleteCustomerById(Long id) {
+        this.customerMapper.deleteCustomerById(id);
     }
 
 }
