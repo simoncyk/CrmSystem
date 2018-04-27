@@ -213,32 +213,32 @@
 					<form class="form-inline" action="${pageContext.request.contextPath }/customer/list.action" method="get">
 						<div class="form-group">
 							<label for="customerName">客户名称</label> 
-							<input type="text" class="form-control" id="customerName" value="${custName }" name="custName">
+							<input type="text" class="form-control" id="customerName" value="${custName}" name="cust_name">
 						</div>
 						<div class="form-group">
 							<label for="customerFrom">客户来源</label> 
-							<select	class="form-control" id="customerFrom" placeholder="客户来源" name="custSource">
+							<select	class="form-control" id="customerFrom" placeholder="客户来源" name="cust_source">
 								<option value="">--请选择--</option>
 								<c:forEach items="${fromType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custSource}"> selected</c:if>>${item.dict_item_name }</option>
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == custSource}"> selected</c:if>>${item.dict_item_name}</option>
 								</c:forEach>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="custIndustry">所属行业</label> 
-							<select	class="form-control" id="custIndustry"  name="custIndustry">
+							<select	class="form-control" id="custIndustry"  name="cust_industry">
 								<option value="">--请选择--</option>
 								<c:forEach items="${industryType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custIndustry}"> selected</c:if>>${item.dict_item_name }</option>
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == custIndustry}"> selected</c:if>>${item.dict_item_name}</option>
 								</c:forEach>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="custLevel">客户级别</label>
-							<select	class="form-control" id="custLevel" name="custLevel">
+							<select	class="form-control" id="custLevel" name="cust_level">
 								<option value="">--请选择--</option>
 								<c:forEach items="${levelType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custLevel}"> selected</c:if>>${item.dict_item_name }</option>
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == custLevel}"> selected</c:if>>${item.dict_item_name}</option>
 								</c:forEach>
 							</select>
 						</div>
@@ -283,7 +283,14 @@
 							</tbody>
 						</table>
 						<div class="col-md-12 text-right">
-							<%--<itcast:page url="${pageContext.request.contextPath }/customer/list.action" />--%>
+							<p>一共${pageInfo.pages}页/第${pageInfo.pageNum}页</p>
+							<a href="list.action?pagenum=1&cust_name=${custName}&cust_source=${custSource}&cust_industry=${custIndustry}&cust_level=${custLevel}">第一页</a>
+							<a href="list.action?pagenum=${pageInfo.prePage}&cust_name=${custName}&cust_source=${custSource}&cust_industry=${custIndustry}&cust_level=${custLevel}">上一页</a>
+							<c:forEach items="${pageInfo.navigatepageNums}" var="NavigatepageNums">
+								<a href="list.action?pagenum=${NavigatepageNums}&cust_name=${custName}&cust_source=${custSource}&cust_industry=${custIndustry}&cust_level=${custLevel}">${NavigatepageNums}</a>
+							</c:forEach>
+							<a href="list.action?pagenum=${pageInfo.nextPage}&cust_name=${custName}&cust_source=${custSource}&cust_industry=${custIndustry}&cust_level=${custLevel}">下一页</a>
+							<a href="list.action?pagenum=${pageInfo.pages}&cust_name=${custName}&cust_source=${custSource}&cust_industry=${custIndustry}&cust_level=${custLevel}">最后页</a>
 						</div>
 						<!-- /.panel-body -->
 					</div>
@@ -408,11 +415,12 @@
 	<script type="text/javascript">
 		thisU1 = window.location.protocol; // http:
 		thisU2 = window.location.host;   // localhost:81
-		basePath=thisU1+thisU2;
+		basePath=thisU1+thisU2+"CRM/customer/";
 		function editCustomer(id) {
+
 			$.ajax({
 				type:"get",
-				url:"/customer/edit.action",
+				url:"edit.action",
 				data:{"id":id},
 				success:function(data) {
 					$("#edit_cust_id").val(data.cust_id);
@@ -430,7 +438,7 @@
 			});
 		}
 		function updateCustomer() {
-			$.post("/customer/update.action",$("#edit_customer_form").serialize(),function(data){
+			$.post("update.action",$("#edit_customer_form").serialize(),function(data){
 				alert("客户信息更新成功！");
 				window.location.reload();
 			});
@@ -438,7 +446,7 @@
 
 		function deleteCustomer(id) {
 			if(confirm('确实要删除该客户吗?')) {
-				$.post("/customer/delete.action",{"id":id},function(data){
+				$.post("delete.action",{"id":id},function(data){
 					alert("客户删除更新成功！");
 					window.location.reload();
 				});

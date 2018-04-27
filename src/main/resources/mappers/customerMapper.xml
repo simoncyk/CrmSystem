@@ -190,21 +190,21 @@
 
   <sql id="customerQueryVo">
     <where>
-      <if test="custName != null and custName != ''">
-          AND a.cust_name LIKE '%${custName}%'
+      <if test="cust_name != null and cust_name != ''">
+          AND a.cust_name LIKE '%${cust_name}%'
       </if>
-      <if test="custSource != null and custSource != ''">
-          AND a.cust_source = #{custSource}
+      <if test="cust_source != null and cust_source != ''">
+          AND a.cust_source = #{cust_source}
       </if>
-      <if test="custIndustry != null and custIndustry != ''">
-          AND a.cust_industry = #{custIndustry}
+      <if test="cust_industry != null and cust_industry != ''">
+          AND a.cust_industry = #{cust_industry}
       </if>
-      <if test="custLevel != null and custLevel != ''">
-          AND a.cust_level = #{custLevel}
+      <if test="cust_level != null and cust_level != ''">
+          AND a.cust_level = #{cust_level}
       </if>
     </where>
   </sql>
-  <select id="queryCustomerByQueryVo" parameterType="com.CrmSystem.pojo.customer"
+  <select id="queryCustomerByQueryVo" parameterType="com.CrmSystem.pojo.customerVo"
   resultType="com.CrmSystem.pojo.customer">
         SELECT
         a.cust_id,
@@ -226,9 +226,7 @@
         LEFT JOIN crm_base_dict c ON a.cust_industry = c.dict_id
         LEFT JOIN crm_base_dict d ON a.cust_level = d.dict_id
   <include refid="customerQueryVo"/>
-       <if test="start != null">
-        LIMIT #{start}, #{rows}
-     </if>
+
  </select>
 
   <!-- 根据id查询用户 -->

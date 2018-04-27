@@ -1,6 +1,7 @@
 package com.CrmSystem.dao;
 
 import com.CrmSystem.pojo.customer;
+import com.CrmSystem.pojo.customerVo;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public interface customerMapper {
      * @param queryVo
      * @return
      */
-    List<customer> queryCustomerByQueryVo();
+    List<customer> queryCustomerByQueryVo(customerVo customerVo );
     customer queryCustomerById(Long id);
     /**
      * 根据id编辑客户
