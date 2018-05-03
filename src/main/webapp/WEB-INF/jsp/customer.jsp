@@ -60,7 +60,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.html">BOOT客户管理系统 v2.0</a>
+			<a class="navbar-brand" href="login.jsp">BOOT客户管理系统 v2.0</a>
 		</div>
 		<!-- /.navbar-header -->
 
